@@ -9,6 +9,7 @@
             height: 100%;
             width: 100%;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             margin: 0;
@@ -33,10 +34,50 @@
             background-color: hsl(50, 100%, 50%);
             border: .25vmin solid black;
         }
+
+        #mobile-arrows{
+            display: none;
+        }
+
+        @media only screen and (max-width: 600px){
+            #mobile-arrows{
+                display: block;
+                color: white;
+                width: 200px;
+                height: 200px;
+                margin-top: 50px;
+            }
+            .arrow{
+                font-size: 2.3rem;
+                width: 50px;
+                text-align: center;
+            }
+            .up {
+                margin: 0 auto;
+            }
+            .left{
+                float: left;
+                margin-top: 25px;
+            }
+            .right{
+                float: right;
+                margin-top: 25px;
+            }
+            .down{
+                margin: 0 auto;
+                margin-top: 100px;
+            }
+        }
     </style>
     <script src="game.js" defer type="module"></script>
     </head>
 <body>
     <div id="game-board"></div> 
+    <div id="mobile-arrows">
+        <div id="up" class="up arrow">&#8593;</div>
+        <div id="left" class="left arrow">&#8592;</div>
+        <div id="right" class="right arrow">&#8594;</div>
+        <div id="down" class="down arrow">&#8595;</div>
+    </div>
 </body>
 </html>
