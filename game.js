@@ -11,7 +11,7 @@ function main(currentTime){
         if (confirm('You lost. Press ok to restart')){
             window.location = '/';
         }
-        return
+        rs
     }
 
     window.requestAnimationFrame(main);
